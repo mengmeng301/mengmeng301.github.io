@@ -1,0 +1,97 @@
+<!-- Sales demo built by Rankly Design — not the business's live website. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanderVeer Auto Diesel — Northglenn, CO</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: #f2f2f2; background: #14161a; line-height: 1.5; }
+  a { text-decoration: none; }
+
+  .callbar { position: sticky; top: 0; z-index: 10; background: #ffb500; text-align: center; padding: 0.6rem 1rem; }
+  .callbar a { color: #14161a; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.02em; display: block; }
+
+  header { background: linear-gradient(135deg, #1d2026 0%, #2b2f38 100%); padding: 2.2rem 1.25rem 1.6rem; text-align: center; border-bottom: 4px solid #ffb500; }
+  header .name { font-size: 2rem; font-weight: 900; letter-spacing: 0.03em; text-transform: uppercase; }
+  header .name span { color: #ffb500; }
+  header .city { margin-top: 0.35rem; font-size: 1rem; color: #c9ccd4; letter-spacing: 0.12em; text-transform: uppercase; }
+
+  .hero { background: linear-gradient(160deg, #23262e 0%, #14161a 70%); padding: 2.4rem 1.25rem; text-align: center; }
+  .hero h1 { font-size: 1.7rem; font-weight: 800; line-height: 1.25; }
+  .hero h1 span { color: #ffb500; }
+  .hero p { margin: 1rem auto 1.6rem; max-width: 32rem; color: #c9ccd4; font-size: 1.05rem; }
+  .callbtn { display: inline-block; background: #ffb500; color: #14161a; font-weight: 800; font-size: 1.25rem; padding: 1rem 2rem; border-radius: 0.5rem; box-shadow: 0 4px 14px rgba(255,181,0,0.35); }
+  .callbtn small { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; }
+
+  .trust { background: #1d2026; border-top: 1px solid #333845; border-bottom: 1px solid #333845; text-align: center; padding: 0.9rem 1rem; font-size: 0.95rem; color: #c9ccd4; letter-spacing: 0.04em; }
+  .trust strong { color: #ffb500; }
+
+  section { padding: 2.2rem 1.25rem; max-width: 60rem; margin: 0 auto; }
+  section h2 { font-size: 1.4rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.2rem; text-align: center; }
+  section h2 span { color: #ffb500; }
+
+  .services { list-style: none; display: grid; gap: 0.9rem; }
+  .services li { background: #1d2026; border-left: 5px solid #ffb500; border-radius: 0.4rem; padding: 1rem 1.1rem; }
+  .services li strong { display: block; font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .services li p { color: #c9ccd4; font-size: 0.95rem; }
+
+  .contact { background: linear-gradient(160deg, #1d2026, #14161a); border-top: 4px solid #ffb500; text-align: center; }
+  .contact p { color: #c9ccd4; margin-bottom: 0.4rem; }
+  .contact .addr { font-size: 1.05rem; color: #f2f2f2; }
+  .contact .callbtn { margin-top: 1.2rem; }
+
+  footer { text-align: center; padding: 1.4rem 1rem 2rem; color: #8a8f9c; font-size: 0.85rem; }
+
+  @media (min-width: 640px) {
+    header .name { font-size: 2.6rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .services { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="callbar">
+  <a href="tel:+17209486134">&#128222; Tap to Call: (720) 948-6134</a>
+</div>
+
+<header>
+  <div class="name">VanderVeer <span>Auto Diesel</span></div>
+  <div class="city">Northglenn, Colorado</div>
+</header>
+
+<div class="hero">
+  <h1>VanderVeer Auto Diesel — <span>diesel repair done by the owner</span></h1>
+  <p>Owner-operated diesel and auto repair in Northglenn. When your truck is down, you talk to the person who actually turns the wrenches.</p>
+  <a class="callbtn" href="tel:+17209486134">Call (720) 948-6134<small>Tap to call now</small></a>
+</div>
+
+<div class="trust">Owner-operated &middot; <strong>Matt Fleming</strong> &middot; Northglenn, CO</div>
+
+<section>
+  <h2>What We <span>Do</span></h2>
+  <ul class="services">
+    <li><strong>Diesel Engine Repair</strong><p>Diesel diagnostics and repair for work trucks and daily drivers.</p></li>
+    <li><strong>Engine Diagnostics</strong><p>Warning lights, drivability problems, and hard-to-find faults, tracked down properly.</p></li>
+    <li><strong>Auto Repair</strong><p>General repair for cars and trucks, gas and diesel.</p></li>
+    <li><strong>Brake Service</strong><p>Pads, rotors, and full brake inspections so you stop with confidence.</p></li>
+    <li><strong>Preventive Maintenance</strong><p>Oil, fluids, filters, and inspections that keep small problems small.</p></li>
+    <li><strong>Suspension &amp; Steering</strong><p>Shocks, struts, and front-end work for a truck that tracks straight.</p></li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Get a <span>Quote</span></h2>
+  <p class="addr">VanderVeer Auto Diesel<br>11701 Washington St<br>Northglenn, CO</p>
+  <p>Fastest way to reach us is by phone:</p>
+  <a class="callbtn" href="tel:+17209486134">Call (720) 948-6134<small>Tap to call now</small></a>
+</section>
+
+<footer>
+  VanderVeer Auto Diesel &middot; Northglenn, Colorado
+</footer>
+
+</body>
+</html>
