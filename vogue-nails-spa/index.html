@@ -7,118 +7,192 @@
 <meta name="robots" content="noindex">
 <title>Vogue Nails Spa — Thornton, CO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --brand: #c2497d; --brand-dark: #a03a68; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-         background: #f8f9fa; color: #4a4a4a; line-height: 1.6; }
-  a { text-decoration: none; }
-  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 2rem; }
-
-  /* Rankly preview bar */
-  .previewbar { background: #1a1a1a; color: #f2f2f2; }
-  .previewbar .wrap { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: center;
-                      justify-content: space-between; padding-top: 0.7rem; padding-bottom: 0.7rem; }
-  .previewbar p { font-size: 0.92rem; }
-  .previewbar p strong { color: #fff; }
-
-  .btn { display: inline-block; background: var(--brand); color: #fff; font-weight: 700;
-         padding: 0.8rem 1.6rem; border-radius: 8px; transition: all 0.2s ease; }
-  .btn:hover { background: var(--brand-dark); transform: translateY(-1px); }
-  .btn.small { padding: 0.5rem 1.1rem; font-size: 0.92rem; }
-  .btn.ghost { background: #fff; color: var(--brand); border: 1px solid var(--brand); }
-  .btn.ghost:hover { background: var(--brand); color: #fff; }
-
-  /* Demo site header */
-  .sitehead { background: #fff; border-bottom: 1px solid #eaeaea; }
-  .sitehead .wrap { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: center;
-                    justify-content: space-between; padding-top: 1.1rem; padding-bottom: 1.1rem; }
-  .sitehead .brand-name { font-size: 1.45rem; font-weight: 800; color: #1a1a1a; letter-spacing: -0.01em; }
-  .sitehead .brand-sub { font-size: 0.9rem; color: #4a4a4a; }
-
-  /* Split hero */
-  .hero { padding: 5rem 0; }
-  .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-  .hero h1 { font-size: 2.7rem; font-weight: 800; line-height: 1.12; color: #1a1a1a; letter-spacing: -0.02em; }
-  .hero .sub { margin: 1.2rem 0 1.8rem; font-size: 1.13rem; max-width: 32rem; }
-  .hero .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
-  .rating-chip { display: inline-flex; align-items: center; gap: 0.45rem; background: #fff;
-                 border: 1px solid #eaeaea; border-radius: 999px; padding: 0.45rem 1rem;
-                 box-shadow: 0 2px 8px rgba(0,0,0,0.05); font-size: 0.95rem; color: #1a1a1a; }
-  .rating-chip .stars { color: #f5a623; letter-spacing: 0.08em; }
-  .hero-media { border-radius: 8px; min-height: 22rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-                background: linear-gradient(140deg, var(--brand) 0%, var(--brand-dark) 100%);
-                display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .hero-media img { width: 100%; height: 100%; min-height: 22rem; object-fit: cover; display: block; }
-  .hero-media .fallback { text-align: center; color: #fff; padding: 2.5rem 1.5rem; }
-  .hero-media .fallback .big { font-size: 2rem; font-weight: 800; line-height: 1.25; display: block; }
-  .hero-media .fallback .num { font-size: 1.3rem; font-weight: 700; opacity: 0.92; display: block; margin-top: 0.8rem; }
-
-  .truststrip { background: #fff; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea;
-                text-align: center; padding: 1.1rem 2rem; color: #1a1a1a; font-weight: 600; }
-
-  section.block { padding: 5rem 0; }
-  section.block h2 { font-size: 2rem; font-weight: 800; color: #1a1a1a; letter-spacing: -0.01em; margin-bottom: 0.6rem; }
-  section.block .lead { max-width: 40rem; margin-bottom: 2.2rem; font-size: 1.05rem; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.2rem;
-           list-style: none; }
-  .cards li { background: #fff; border: 1px solid #eaeaea; border-radius: 8px;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 1.6rem; }
-  .cards li strong { display: block; color: #1a1a1a; font-size: 1.08rem; margin-bottom: 0.35rem; }
-  .cards li p { font-size: 0.97rem; }
-
-  .proof .card { background: #fff; border: 1px solid #eaeaea; border-radius: 8px;
-                 box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 2.6rem 2rem; text-align: center; }
-  .proof .stars { color: #f5a623; font-size: 1.9rem; letter-spacing: 0.15em; }
-  .proof .big { font-size: 1.5rem; font-weight: 800; color: #1a1a1a; margin-top: 0.6rem; }
-  .proof p { margin-top: 0.4rem; }
-
-  .contact .card { background: #fff; border: 1px solid #eaeaea; border-radius: 8px;
-                   box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 2.6rem 2rem; text-align: center; }
-  .contact .addr { color: #1a1a1a; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.4rem; }
-  .contact .btn { margin-top: 1.3rem; }
-
-  /* Rankly offer section */
-  .offer { padding: 5rem 0; }
-  .offer .card { background: #fff; border: 1px solid #eaeaea; border-radius: 8px;
-                 box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 2.8rem 2rem; }
-  .offer h2 { font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 0.6rem; }
-  .offer .badge { display: inline-block; background: var(--brand); color: #fff; font-weight: 700;
-                  font-size: 0.9rem; border-radius: 999px; padding: 0.3rem 0.9rem; margin-bottom: 1.2rem; }
-  .offer .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem; margin-top: 1.4rem; }
-  .offer .price { font-size: 1.05rem; margin-bottom: 1rem; color: #1a1a1a; }
-  .offer .price s { color: #9a9a9a; }
-  .offer .price .now { font-size: 1.7rem; font-weight: 800; color: var(--brand); }
-  .offer .now { font-weight: 800; color: var(--brand); }
-  .offer s { color: #9a9a9a; }
-  .offer ul { list-style: none; }
-  .offer ul li { padding: 0.45rem 0 0.45rem 1.6rem; position: relative; }
-  .offer ul li::before { content: "\2713"; position: absolute; left: 0; color: var(--brand); font-weight: 800; }
-  .offer .cta-row { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
-  .offer .cta-row .mail { color: var(--brand); font-weight: 600; transition: all 0.2s ease; }
-  .offer .cta-row .mail:hover { color: var(--brand-dark); }
-
-  footer { text-align: center; padding: 2rem 2rem 3rem; font-size: 0.9rem; color: #8a8f9c; }
-
-  .mobilebar { display: none; }
-  @media (max-width: 820px) {
-    .hero { padding: 3rem 0; }
-    .hero .wrap { grid-template-columns: 1fr; gap: 2rem; }
-    .hero h1 { font-size: 2.1rem; }
-    section.block, .offer { padding: 3rem 0; }
-    .offer .grid { grid-template-columns: 1fr; }
-    body { padding-bottom: 4.2rem; }
-    .mobilebar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
-                 background: #fff; border-top: 1px solid #eaeaea; box-shadow: 0 -2px 8px rgba(0,0,0,0.06); }
-    .mobilebar a { flex: 1; text-align: center; padding: 0.95rem 0.5rem; font-weight: 700; color: var(--brand);
-                   transition: all 0.2s ease; }
-    .mobilebar a.book { background: var(--brand); color: #fff; }
-    .mobilebar a.book:hover { background: var(--brand-dark); }
+  :root {
+    --base: #f4ede6;        /* warm porcelain */
+    --ink: #2f1d27;         /* deep plum ink */
+    --accent: #b03060;      /* raspberry rose */
+    --ink-soft: rgba(47,29,39,0.72);
+    --hair: rgba(47,29,39,0.22);
   }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: var(--base); color: var(--ink-soft); line-height: 1.65;
+         overflow-x: hidden; }
+  a { text-decoration: none; }
+  .serif { font-family: 'Playfair Display', Georgia, serif; }
+  .wrap { max-width: 76rem; margin: 0 auto; padding: 0 2rem; position: relative; }
+  .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--accent); }
 
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes slowzoom { from { transform: scale(1); } to { transform: scale(1.06); } }
+  .rise { opacity: 0; animation: rise 0.9s cubic-bezier(0.22,0.8,0.32,1) forwards; }
+
+  /* ---------- Rankly preview bar (editorial restyle) ---------- */
+  .previewbar { background: var(--ink); color: var(--base); position: relative; z-index: 40; }
+  .previewbar .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; align-items: center;
+                      justify-content: space-between; padding-top: 0.65rem; padding-bottom: 0.65rem; }
+  .previewbar p { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; }
+  .previewbar p strong { color: #fff; font-weight: 700; }
+  .btn-book-sm { display: inline-block; border: 1px solid var(--accent); color: #fff; background: var(--accent);
+                 font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+                 padding: 0.45rem 1.1rem; transition: all 0.25s ease; }
+  .btn-book-sm:hover { background: transparent; color: var(--accent); }
+
+  /* ---------- Masthead ---------- */
+  .masthead { padding: 2.2rem 0 0.5rem; }
+  .masthead .wrap { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; }
+  .wordmark { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; color: var(--ink);
+              font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 0.95; letter-spacing: -0.01em; }
+  .wordmark em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .wordmark-sub { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.42em; text-transform: uppercase;
+                  color: var(--ink); margin-top: 0.45rem; }
+  .mast-tel { text-align: right; }
+  .mast-tel .lbl { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft); }
+  .mast-tel a { font-family: 'Playfair Display', Georgia, serif; font-size: 1.55rem; font-weight: 700;
+                color: var(--ink); border-bottom: 2px solid var(--accent); transition: color 0.25s ease; }
+  .mast-tel a:hover { color: var(--accent); }
+
+  /* ---------- Hero: editorial asymmetry ---------- */
+  .hero { position: relative; padding: 3.2rem 0 7.5rem; }
+  .hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 0; align-items: start; }
+  .hero-copy { position: relative; z-index: 3; padding-top: 1.5rem; }
+  .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; color: var(--ink);
+             font-size: clamp(3rem, 7.2vw, 6.1rem); line-height: 1.02; letter-spacing: -0.015em;
+             width: 118%; margin-top: 1.1rem; }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .hero .sub { margin: 1.6rem 0 2.1rem; font-size: 1.14rem; max-width: 27rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .btn-call { display: inline-block; background: var(--ink); color: var(--base); font-weight: 700;
+              letter-spacing: 0.06em; padding: 1rem 2rem; transition: all 0.25s ease; }
+  .btn-call:hover { background: var(--accent); color: #fff; }
+  .btn-visit { display: inline-block; color: var(--ink); font-weight: 700; letter-spacing: 0.06em;
+               padding: 1rem 0.4rem; border-bottom: 2px solid var(--ink); transition: all 0.25s ease; }
+  .btn-visit:hover { color: var(--accent); border-color: var(--accent); }
+  .hero-media { position: relative; z-index: 1; margin-top: 5.5rem; }
+  .hero-media .frame { position: relative; overflow: hidden; background: linear-gradient(150deg, #d9a7b8, var(--accent)); }
+  .hero-media .frame::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(47,29,39,0.35);
+                              transform: translate(14px, 14px); pointer-events: none; }
+  .hero-media img.main { width: 100%; height: 100%; min-height: 30rem; object-fit: cover; display: block;
+                         animation: slowzoom 14s ease-out forwards; }
+  .hero-media img.small { position: absolute; left: -5.2rem; bottom: -3.4rem; width: 46%; aspect-ratio: 4/3;
+                          object-fit: cover; border: 0.55rem solid var(--base); z-index: 4;
+                          box-shadow: 0 24px 50px rgba(47,29,39,0.28); }
   .hero-media.imgfail img { display: none; }
-  .hero-media.imgfail .fallback { display: block !important; }
+  .side-label { position: absolute; right: -0.4rem; top: 9rem; writing-mode: vertical-rl;
+                font-size: 0.74rem; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase;
+                color: var(--ink-soft); }
+
+  /* rating stat row */
+  .stat-row { border-top: 1px solid var(--hair); margin-top: 1rem; padding: 2.4rem 0 0.5rem;
+              display: grid; grid-template-columns: auto 1fr; gap: 0 2.6rem; align-items: center; }
+  .stat-num { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; color: var(--ink);
+              font-size: clamp(4rem, 8vw, 6.4rem); line-height: 0.9; }
+  .stat-num i { font-style: italic; font-weight: 500; color: var(--accent); font-size: 0.45em; vertical-align: 1.1em; }
+  .stat-txt .stars { color: var(--accent); font-size: 1.3rem; letter-spacing: 0.22em; }
+  .stat-txt p { font-size: 1.05rem; color: var(--ink); font-weight: 600; margin-top: 0.3rem; }
+  .stat-txt span { font-size: 0.95rem; color: var(--ink-soft); font-weight: 400; }
+
+  /* ---------- Services: editorial numbered rows ---------- */
+  section.block { padding: 6rem 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 1.6rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .sec-head h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; color: var(--ink);
+                 font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; }
+  .sec-head h2 em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .sec-lead { font-size: 1.06rem; max-width: 34rem; margin-bottom: 2.4rem; }
+  .svc { list-style: none; }
+  .svc li { display: grid; grid-template-columns: 5.5rem 1fr 1.2fr; gap: 1.5rem; align-items: baseline;
+            padding: 2.1rem 0; border-top: 1px solid var(--hair); transition: padding 0.3s ease; }
+  .svc li:last-child { border-bottom: 1px solid var(--hair); }
+  .svc li:hover { padding-left: 0.8rem; }
+  .svc .no { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500;
+             color: var(--accent); font-size: 1.5rem; }
+  .svc .nm { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--ink);
+             font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.1; }
+  .svc .ds { font-size: 1rem; max-width: 22rem; justify-self: end; }
+  .svc li:nth-child(odd) { padding-right: 4rem; }
+  .svc li:nth-child(even) { padding-left: 4rem; }
+  .svc li:nth-child(even):hover { padding-left: 4.8rem; }
+
+  /* ---------- Proof band ---------- */
+  .proof { background: var(--ink); color: var(--base); padding: 6rem 0; position: relative; overflow: hidden; }
+  .proof .giant { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; line-height: 0.85;
+                   font-size: clamp(7rem, 20vw, 17rem); color: transparent;
+                   -webkit-text-stroke: 1px rgba(244,237,230,0.28); position: absolute; right: -1rem; top: 0.5rem;
+                   pointer-events: none; user-select: none; }
+  .proof .stars { color: var(--accent); font-size: 1.8rem; letter-spacing: 0.3em; position: relative; }
+  .proof .big { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--base);
+                font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.12; max-width: 42rem; margin-top: 1rem; position: relative; }
+  .proof .big em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .proof p { margin-top: 1rem; max-width: 30rem; color: rgba(244,237,230,0.75); position: relative; }
+
+  /* ---------- Contact ---------- */
+  .contact-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 3rem; align-items: end; }
+  .contact .addr { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--ink);
+                   font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.2; margin-top: 1.2rem; }
+  .contact .addr em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .contact .side { border-left: 3px solid var(--accent); padding-left: 1.8rem; }
+  .contact .side p { margin-bottom: 1.2rem; }
+
+  /* ---------- Rankly offer (editorial frame) ---------- */
+  .offer { padding: 6rem 0 7rem; }
+  .offer-frame { border: 1px solid var(--ink); padding: clamp(2rem, 5vw, 4rem); position: relative;
+                 background: rgba(255,255,255,0.35); }
+  .offer-frame::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--accent);
+                         transform: translate(10px, 10px); pointer-events: none; }
+  .offer .badge { display: inline-block; background: var(--accent); color: #fff; font-weight: 700;
+                  font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
+                  padding: 0.45rem 1.1rem; margin-bottom: 1.6rem; position: relative; }
+  .offer h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; color: var(--ink);
+              font-size: clamp(2.3rem, 4.6vw, 3.8rem); line-height: 1.08; margin-bottom: 1rem; position: relative; }
+  .offer h2 em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .offer .intro { max-width: 44rem; position: relative; }
+  .offer s { color: rgba(47,29,39,0.45); }
+  .offer .now { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; color: var(--accent); }
+  .offer .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6rem; margin-top: 2.4rem; position: relative; }
+  .offer .price .lbl { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink); }
+  .offer .price { margin-bottom: 1.4rem; color: var(--ink); }
+  .offer .price .now { font-size: 2.4rem; }
+  .offer .fine { font-size: 0.95rem; max-width: 24rem; }
+  .offer ul { list-style: none; }
+  .offer ul li { padding: 0.55rem 0 0.55rem 1.7rem; position: relative; color: var(--ink); font-weight: 500; }
+  .offer ul li::before { content: "—"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .offer .cta-row { margin-top: 2.6rem; display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; position: relative; }
+  .btn-book { display: inline-block; background: var(--accent); color: #fff; font-weight: 700; letter-spacing: 0.06em;
+              padding: 1rem 2.2rem; transition: all 0.25s ease; }
+  .btn-book:hover { background: var(--ink); }
+  .offer .mail { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--accent); transition: color 0.25s ease; }
+  .offer .mail:hover { color: var(--accent); }
+
+  footer { border-top: 1px solid var(--hair); padding: 2.2rem 2rem 3rem; text-align: center;
+           font-size: 0.88rem; color: var(--ink-soft); }
+  footer .fbrand { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--ink); font-size: 1.05rem; }
+
+  /* ---------- Sticky mobile bar ---------- */
+  .mobilebar { display: none; }
+  @media (max-width: 860px) {
+    .hero { padding: 2.2rem 0 5rem; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero h1 { width: 100%; font-size: clamp(2.7rem, 13vw, 4rem); }
+    .hero-media { margin-top: 2.6rem; }
+    .hero-media img.main { min-height: 20rem; }
+    .hero-media img.small { left: auto; right: -0.5rem; bottom: -2.6rem; width: 52%; }
+    .side-label { display: none; }
+    .stat-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    section.block { padding: 4rem 0; }
+    .svc li, .svc li:nth-child(even) { grid-template-columns: 3.2rem 1fr; padding-left: 0; padding-right: 0; }
+    .svc .ds { grid-column: 2; justify-self: start; }
+    .contact-grid, .offer .grid { grid-template-columns: 1fr; }
+    body { padding-bottom: 4.4rem; }
+    .mobilebar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+                 background: var(--ink); box-shadow: 0 -6px 24px rgba(47,29,39,0.25); }
+    .mobilebar a { flex: 1; text-align: center; padding: 1rem 0.5rem; font-weight: 700;
+                   letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.86rem; color: var(--base); }
+    .mobilebar a.book { background: var(--accent); color: #fff; }
+  }
 </style>
 </head>
 <body>
@@ -126,84 +200,106 @@
 <div class="previewbar">
   <div class="wrap">
     <p><strong>Free preview built for Vogue Nails Spa by Rankly Design</strong> — this site is not live yet.</p>
-    <a class="btn small" href="https://calendly.com/ranklydesign/30min">Book a call</a>
+    <a class="btn-book-sm" href="https://calendly.com/ranklydesign/30min">Book a call</a>
   </div>
 </div>
 
-<header class="sitehead">
+<header class="masthead">
   <div class="wrap">
-    <div>
-      <div class="brand-name">Vogue Nails Spa</div>
-      <div class="brand-sub">Nail salon · Thornton, Colorado</div>
+    <div class="rise" style="animation-delay:0.05s">
+      <div class="wordmark">Vogue <em>Nails</em></div>
+      <div class="wordmark-sub">Spa · Thornton, Colorado</div>
     </div>
-    <a class="btn" href="tel:+13034578861">Call (303) 457-8861</a>
+    <div class="mast-tel rise" style="animation-delay:0.15s">
+      <div class="lbl">Call to book</div>
+      <a href="tel:+13034578861">(303) 457-8861</a>
+    </div>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <div>
-      <h1>Thornton's nail salon for your next fresh set</h1>
-      <p class="sub">Manicures, pedicures, gel, and acrylics — call to book your chair and skip the wait.</p>
-      <div class="actions">
-        <a class="btn" href="tel:+13034578861">Call (303) 457-8861</a>
-        <a class="btn ghost" href="#contact">Visit us</a>
+    <div class="side-label">Manicures · Pedicures · Gel · Acrylics</div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="kicker rise" style="animation-delay:0.1s">Nail Salon — Thornton, Colorado</p>
+        <h1 class="rise" style="animation-delay:0.22s">Thornton's nail salon for your next <em>fresh set</em></h1>
+        <p class="sub rise" style="animation-delay:0.36s">Manicures, pedicures, gel, and acrylics — call to book your chair and skip the wait.</p>
+        <div class="hero-actions rise" style="animation-delay:0.5s">
+          <a class="btn-call" href="tel:+13034578861">Call (303) 457-8861</a>
+          <a class="btn-visit" href="#contact">Visit us</a>
+        </div>
       </div>
-      <div style="margin-top:1.2rem">  <span class="rating-chip"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span><strong>4.3 out of 5</strong>&nbsp;·&nbsp;161 Google reviews</span>
-</div>
+      <div class="hero-media rise" style="animation-delay:0.3s">
+        <div class="frame">
+          <img class="main" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1100&q=70" alt="Fresh manicure at Vogue Nails Spa" onerror="this.closest('.hero-media').classList.add('imgfail');this.remove();">
+        </div>
+        <img class="small" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=70" alt="Natural manicure, close up" loading="lazy" onerror="this.remove();">
+      </div>
     </div>
-    <div class="hero-media"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=70" alt="Fresh manicure at Vogue Nails Spa" loading="lazy" onerror="this.parentElement.classList.add('imgfail');this.remove();"><div class="fallback" style="display:none"><span class="big">Call Vogue Nails Spa</span><span class="num">(303) 457-8861</span></div></div>
+
+    <div class="stat-row rise" style="animation-delay:0.55s">
+      <div class="stat-num">4.3<i>/ 5</i></div>
+      <div class="stat-txt">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p>Rated 4.3 out of 5 on Google <span>— across 161 customer reviews, quoted exactly as it shows today.</span></p>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="truststrip">Rated 4.3 out of 5 from 161 customer reviews</div>
-
 <section class="block">
   <div class="wrap">
-    <h2>What we do</h2>
-    <p class="lead">Vogue Nails Spa serves Thornton and the surrounding area.</p>
-    <ul class="cards">
-    <li><strong>Manicures</strong><p>Classic care and polish.</p></li>
-    <li><strong>Pedicures</strong><p>Spa soak, care, and color.</p></li>
-    <li><strong>Gel</strong><p>Long-wear gel polish.</p></li>
-    <li><strong>Acrylics</strong><p>Full sets and fills.</p></li>
+    <div class="sec-head">
+      <p class="kicker">The Menu</p>
+      <h2>What we <em>do</em></h2>
+    </div>
+    <p class="sec-lead">Vogue Nails Spa serves Thornton and the surrounding area.</p>
+    <ul class="svc">
+      <li><span class="no">No. 1</span><span class="nm">Manicures</span><span class="ds">Classic care and polish.</span></li>
+      <li><span class="no">No. 2</span><span class="nm">Pedicures</span><span class="ds">Spa soak, care, and color.</span></li>
+      <li><span class="no">No. 3</span><span class="nm">Gel</span><span class="ds">Long-wear gel polish.</span></li>
+      <li><span class="no">No. 4</span><span class="nm">Acrylics</span><span class="ds">Full sets and fills.</span></li>
     </ul>
   </div>
 </section>
 
-<section class="block proof">
+<section class="proof">
+  <div class="giant">4.3</div>
   <div class="wrap">
-    <div class="card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-      <div class="big">Rated 4.3 out of 5 on Google</div>
-      <p>That's across 161 customer reviews — quoted exactly as it shows today.</p>
-    </div>
+    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+    <div class="big">Rated <em>4.3 out of 5</em> on Google</div>
+    <p>That's across 161 customer reviews — quoted exactly as it shows today.</p>
   </div>
 </section>
 
 <section class="block contact" id="contact">
   <div class="wrap">
-    <h2>Visit or call us</h2>
-    <p class="lead">We're here when you need us.</p>
-    <div class="card">
-      <p class="addr">Vogue Nails Spa<br>10245 Washington St, Thornton, CO</p>
-      <p>Fastest way to reach us is by phone:</p>
-      <a class="btn" href="tel:+13034578861">Call (303) 457-8861</a>
+    <p class="kicker">Find Us</p>
+    <div class="contact-grid">
+      <div>
+        <h2 class="serif" style="font-weight:900;color:var(--ink);font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;">Visit or <em style="font-weight:500;color:var(--accent);">call us</em></h2>
+        <p class="addr">Vogue Nails Spa<br>10245 Washington St, <em>Thornton, CO</em></p>
+      </div>
+      <div class="side">
+        <p>We're here when you need us. Fastest way to reach us is by phone:</p>
+        <a class="btn-call" href="tel:+13034578861">Call (303) 457-8861</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="offer">
   <div class="wrap">
-    <div class="card">
+    <div class="offer-frame">
       <span class="badge">50% off — short time only</span>
-      <h2>Like this site? Make it yours.</h2>
-      <p>Rankly Design will put this preview on your own domain and keep it running, so your Google searchers land on your business — not a directory page. Setup is <s>$100</s> <span class="now">$50</span> and maintenance is <s>$75/mo</s> <span class="now">$37.50/mo</span> with our launch offer: 50% off both, for a short time only.</p>
+      <h2>Like this site? <em>Make it yours.</em></h2>
+      <p class="intro">Rankly Design will put this preview on your own domain and keep it running, so your Google searchers land on your business — not a directory page. Setup is <s>$100</s> <span class="now">$50</span> and maintenance is <s>$75/mo</s> <span class="now">$37.50/mo</span> with our launch offer: 50% off both, for a short time only.</p>
       <div class="grid">
         <div>
-          <p class="price">Setup<br><s>$100</s> &nbsp;<span class="now">$50</span> one time</p>
-          <p class="price">Maintenance<br><s>$75/mo</s> &nbsp;<span class="now">$37.50/mo</span></p>
-          <p style="font-size:0.95rem;">Launch offer: 50% off the signup and the monthly rate. No fake deadline — but the offer won't last forever.</p>
+          <p class="price"><span class="lbl">Setup</span><br><s>$100</s> &nbsp;<span class="now">$50</span> one time</p>
+          <p class="price"><span class="lbl">Maintenance</span><br><s>$75/mo</s> &nbsp;<span class="now">$37.50/mo</span></p>
+          <p class="fine">Launch offer: 50% off the signup and the monthly rate. No fake deadline — but the offer won't last forever.</p>
         </div>
         <div>
           <ul>
@@ -215,7 +311,7 @@
         </div>
       </div>
       <div class="cta-row">
-        <a class="btn" href="https://calendly.com/ranklydesign/30min">Book a call</a>
+        <a class="btn-book" href="https://calendly.com/ranklydesign/30min">Book a call</a>
         <a class="mail" href="mailto:ranklydesign@gmail.com">or email ranklydesign@gmail.com</a>
       </div>
     </div>
@@ -223,7 +319,7 @@
 </section>
 
 <footer>
-  Vogue Nails Spa · Thornton, Colorado<br>
+  <span class="fbrand">Vogue Nails Spa</span> · Thornton, Colorado<br>
   Free preview built by Rankly Design — not the business's live website.
 </footer>
 
